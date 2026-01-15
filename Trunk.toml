@@ -1,0 +1,13 @@
+[build]
+target = "index.html"
+
+[[hooks]]
+stage = "pre_build"
+command = "powershell"
+command_arguments = [
+    "-Command", 
+    "./tailwind.exe -i style/input.css -o style/output.css"
+]
+
+[serve]
+open = true
